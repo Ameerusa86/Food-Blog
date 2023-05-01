@@ -31,144 +31,142 @@ const Navbar = () => {
   }
 
   return (
-    <div>
-      <div>
-        <nav className="navbar ">
-          <div className="navbar-logo">
-            <img src={logo} className="logo2" alt="" />
-          </div>
-          <div className="links">
-            <ul className="nav-links nav-item-top">
-              <li className="link active">
-                <Link
-                  activeClass="active"
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="link">
-                {" "}
-                <Link
-                  to="foodideas"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Food Ideas
-                </Link>
-              </li>
-              <li className="link">
-                {" "}
-                <Link
-                  to="SpecialMeals"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Special Meals
-                </Link>
-              </li>
-              <li className="link">
-                {" "}
-                <Link
-                  to="FoodReviews"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Food Reviews
-                </Link>
-              </li>
-              <li className="link">
-                {" "}
-                <Link
-                  to="Advertise"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Advertise with us
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="navbar-toggle mx-5" onClick={handleToggle}>
-            {showMenu ? <SlClose /> : <RxHamburgerMenu />}
-          </div>
-          <div className={`navbar-menu ${showMenu ? "show" : ""}`}>
-            <ul className="navbar-nav d-flex">
-              <li className="nav-item_link">
-                <Link
-                  activeClass="active"
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item_link">
-                <Link
-                  to="foodideas"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Food Ideas
-                </Link>
-              </li>
-              <li className="nav-item_link">
-                <Link
-                  to="SpecialMeals"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Special Meals
-                </Link>
-              </li>
-              <li className="nav-item_link">
-                <Link
-                  to="FoodReviews"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Food Reviews
-                </Link>
-              </li>
-              <li className="nav-item_link">
-                <Link
-                  to="Advertise"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  Advertise with us
-                </Link>
-              </li>
-            </ul>
-          </div>
-          {showMenu && <div className="overlay" onClick={handleToggle}></div>}
-        </nav>
-        <div className={`page-content ${showMenu ? "darken" : ""}`}></div>
-      </div>
-    </div>
+    <>
+      <nav className="navbar ">
+        <div className="navbar-logo">
+          <img src={logo} className="logo2" alt="" />
+        </div>
+        <div className="links">
+          <ul className="nav-links nav-item-top">
+            <li className="link active">
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="link">
+              {" "}
+              <Link
+                to="foodideas"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Food Ideas
+              </Link>
+            </li>
+            <li className="link">
+              {" "}
+              <Link
+                to="SpecialMeals"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Special Meals
+              </Link>
+            </li>
+            <li className="link">
+              {" "}
+              <Link
+                to="FoodReviews"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Food Reviews
+              </Link>
+            </li>
+            <li className="link">
+              {" "}
+              <Link
+                to="Advertise"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Advertise with us
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="navbar-toggle mx-5" onClick={handleToggle}>
+          {showMenu ? <SlClose /> : <RxHamburgerMenu />}
+        </div>
+        <div className={`navbar-menu ${showMenu ? "show" : ""}`}>
+          <ul className="navbar-nav d-flex">
+            <li className="nav-item_link">
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="nav-item_link">
+              <Link
+                to="foodideas"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Food Ideas
+              </Link>
+            </li>
+            <li className="nav-item_link">
+              <Link
+                to="SpecialMeals"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Special Meals
+              </Link>
+            </li>
+            <li className="nav-item_link">
+              <Link
+                to="FoodReviews"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Food Reviews
+              </Link>
+            </li>
+            <li className="nav-item_link">
+              <Link
+                to="Advertise"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Advertise with us
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {showMenu && <div className="overlay" onClick={handleToggle}></div>}
+      </nav>
+      <div className={`page-content ${showMenu ? "darken" : ""}`}></div>
+    </>
   );
 };
 

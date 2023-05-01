@@ -1839,6 +1839,14 @@ footer .text {
   align-items: center;
   justify-content: space-between;
   background-color: #f8f9fa;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1024;
+  animation-name: animationFade;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35);
 }
 
 .navbar-toggle {
@@ -1852,7 +1860,7 @@ footer .text {
   top: 0;
   left: -100%;
   width: 35%;
-  height: 100%;
+  height: 100vh;
   background-color: #f8f9fa;
   transition: all 0.75s ease-in-out;
   background-color: #8abc00;
