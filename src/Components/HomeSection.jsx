@@ -1,5 +1,6 @@
 import React from "react";
 import image from "../assets/banner.png";
+import { motion } from "framer-motion";
 
 const HomeSection = () => {
   return (

@@ -23,8 +23,6 @@ const Navbar = () => {
   }
 
   function handleWindowClick(event) {
-    console.log("handleWindowClick called");
-
     if (showMenu && event.target.closest(".navbar-menu") === null) {
       setShowMenu(false);
     }
