@@ -1,12 +1,11 @@
 import React from "react";
 import * as Scroll from "react-scroll";
 import { Link } from "react-scroll";
-
-// import logo from "../assets/logo.png";
 import logo from "../assets/ameer-high-resolution-logo-color-on-transparent-background.svg";
 import { useState, useEffect, useRef } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { SlClose } from "react-icons/sl";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -31,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar ">
-        <div className="navbar-logo">
+        <div>
           <img src={logo} className="logo2" alt="" />
         </div>
         <div className="links">

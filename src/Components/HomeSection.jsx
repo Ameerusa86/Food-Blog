@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "../assets/banner.png";
 import { motion } from "framer-motion";
+import VisibilitySensor from "react-visibility-sensor";
 
 const HomeSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const onVisibilityChange = (isVisible) => {
+    setIsVisible(isVisible);
+  };
   return (
     <section className="banner-section" id="home">
       <div className="container">
         <div className="row no-gutters">
-          <div className="col-lg-12 col-md-12 col-sm-12 img-section order-2 order-lg-1 wow fadeInLeft">
-            <img src={image} alt="img" />
-          </div>
-          <div className="col-lg-5 col-md-12 col-sm-12 text-section order-1 order-lg-2 wow fadeInRight">
+          <VisibilitySensor onChange={onVisibilityChange}>
+            <motion.div
+              style={{ opacity: 0, x: "100%" }}
+              animate={{
+                opacity: isVisible ? 1 : 0,
+                x: isVisible ? 0 : "50px",
+              }}
+              transition={{ duration: 1, ease: "easeIn" }}
+              className="col-lg-12 col-md-12 col-sm-12 img-section order-2 order-lg-1 wow fadeInLeft"
+            >
+              <img src={image} alt="img" />
+            </motion.div>
+          </VisibilitySensor>
+          <motion.div
+            style={{ opacity: 0, x: "-100%" }}
+            animate={{
+              opacity: isVisible ? 1 : 0,
+              x: isVisible ? 0 : "-50px",
+            }}
+            transition={{ duration: 1, ease: "easeIn" }}
+            className="col-lg-5 col-md-12 col-sm-12 text-section order-1 order-lg-2 wow fadeInRight"
+          >
             <h2 className="heading">
               <span className="green-color">delicious</span> <br />
               food ideas.
@@ -27,7 +51,7 @@ const HomeSection = () => {
                 Learn More
               </a>
             </div>
-          </div>
+          </motion.div>
           <div className="col-lg-7 col-0"></div>
         </div>
       </div>
