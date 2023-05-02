@@ -6,4 +6,6 @@
 * Framer Motion
 
 ### Future Updates
+* Adding Mutilple Pages
+* Adding Backend DB & Authentication login & register
 
